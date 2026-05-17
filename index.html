@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Clarity POC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">Brand Clarity POC</p>
+      <h1>Find Your Brand Direction</h1>
+      <p>
+        Answer a few quick questions and receive a personalized brand direction
+        for your small business.
+      </p>
+    </section>
+
+    <section class="card">
+      <form id="brandForm">
+        <label>
+          What type of business are you creating?
+          <select id="businessType" required>
+            <option value="">Choose one</option>
+            <option value="cafe">Café / Bakery</option>
+            <option value="beauty">Beauty / Lifestyle</option>
+            <option value="events">Events / Creative Services</option>
+            <option value="shop">Online Shop</option>
+          </select>
+        </label>
+
+        <label>
+          How do you want your brand to feel?
+          <select id="brandFeeling" required>
+            <option value="">Choose one</option>
+            <option value="warm">Warm and welcoming</option>
+            <option value="luxury">Elegant and elevated</option>
+            <option value="playful">Fun and expressive</option>
+            <option value="minimal">Clean and modern</option>
+          </select>
+        </label>
+
+        <label>
+          What style are you most drawn to?
+          <select id="visualStyle" required>
+            <option value="">Choose one</option>
+            <option value="soft">Soft neutrals</option>
+            <option value="bold">Bold colors</option>
+            <option value="dark">Moody tones</option>
+            <option value="fresh">Fresh and bright</option>
+          </select>
+        </label>
+
+        <button type="submit">Generate My Brand Direction</button>
+      </form>
+    </section>
+
+    <section id="result" class="result hidden">
+      <p class="eyebrow">Your Result</p>
+      <h2 id="resultTitle"></h2>
+      <p id="resultDescription"></p>
+
+      <div class="result-grid">
+        <div>
+          <h3>Brand Personality</h3>
+          <p id="personality"></p>
+        </div>
+
+        <div>
+          <h3>Color Direction</h3>
+          <p id="colors"></p>
+        </div>
+
+        <div>
+          <h3>Typography Direction</h3>
+          <p id="typography"></p>
+        </div>
+
+        <div>
+          <h3>Best Next Step</h3>
+          <p id="nextStep"></p>
+        </div>
+      </div>
+
+      <button id="restartBtn">Start Over</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
