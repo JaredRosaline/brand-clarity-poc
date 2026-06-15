@@ -1,92 +1,81 @@
 const form = document.getElementById("brandForm");
-const result = document.getElementById("result");
-const restartBtn = document.getElementById("restartBtn");
+
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const answers = {
+      businessType: document.getElementById("businessType").value,
+      brandFeeling: document.getElementById("brandFeeling").value,
+      visualStyle: document.getElementById("visualStyle").value
+    };
+
+    localStorage.setItem("brandAnswers", JSON.stringify(answers));
+    window.location.href = "results.html";
+  });
+}
 
 const resultTitle = document.getElementById("resultTitle");
-const resultDescription = document.getElementById("resultDescription");
-const personality = document.getElementById("personality");
-const colors = document.getElementById("colors");
-const typography = document.getElementById("typography");
-const nextStep = document.getElementById("nextStep");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+if (resultTitle) {
+  const savedAnswers = JSON.parse(localStorage.getItem("brandAnswers"));
 
-  const businessType = document.getElementById("businessType").value;
-  const brandFeeling = document.getElementById("brandFeeling").value;
-  const visualStyle = document.getElementById("visualStyle").value;
+  if (!savedAnswers) {
+    resultTitle.textContent = "No Results Found";
+    document.getElementById("resultDescription").textContent =
+      "Please complete the questionnaire first.";
+  } else {
+    const result = generateBrandDirection(savedAnswers);
 
-  let brandDirection = generateBrandDirection(
-    businessType,
-    brandFeeling,
-    visualStyle
-  );
+    resultTitle.textContent = result.title;
+    document.getElementById("resultDescription").textContent = result.description;
+    document.getElementById("personality").textContent = result.personality;
+    document.getElementById("colors").textContent = result.colors;
+    document.getElementById("typography").textContent = result.typography;
+    document.getElementById("nextStep").textContent = result.nextStep;
+  }
+}
 
-  resultTitle.textContent = brandDirection.title;
-  resultDescription.textContent = brandDirection.description;
-  personality.textContent = brandDirection.personality;
-  colors.textContent = brandDirection.colors;
-  typography.textContent = brandDirection.typography;
-  nextStep.textContent = brandDirection.nextStep;
-
-  result.classList.remove("hidden");
-  result.scrollIntoView({ behavior: "smooth" });
-});
-
-restartBtn.addEventListener("click", function () {
-  form.reset();
-  result.classList.add("hidden");
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-function generateBrandDirection(businessType, brandFeeling, visualStyle) {
-  if (brandFeeling === "luxury" || visualStyle === "dark") {
+function generateBrandDirection(answers) {
+  if (answers.brandFeeling === "luxury" || answers.visualStyle === "dark") {
     return {
       title: "Elevated Editorial",
-      description:
-        "Your brand direction should feel refined, polished, and memorable. This style works well for businesses that want to build trust through a high-end visual experience.",
+      description: "Your brand should feel polished, refined, and memorable.",
       personality: "Elegant, confident, intentional, professional",
-      colors: "Deep navy, charcoal, ivory, champagne, muted gold",
-      typography: "Modern serif paired with a clean sans-serif",
-      nextStep:
-        "Create a visual moodboard that focuses on premium textures, strong contrast, and consistent imagery."
+      colors: "Navy, charcoal, ivory, champagne, muted gold",
+      typography: "Modern serif heading paired with a clean sans-serif body font",
+      nextStep: "Create a moodboard with premium textures, strong contrast, and intentional imagery."
     };
   }
 
-  if (brandFeeling === "playful" || visualStyle === "bold") {
+  if (answers.brandFeeling === "playful" || answers.visualStyle === "bold") {
     return {
       title: "Playful Creative",
-      description:
-        "Your brand direction should feel energetic, expressive, and easy to recognize. This style works well for brands that want to stand out and create a memorable customer experience.",
+      description: "Your brand should feel expressive, energetic, and easy to recognize.",
       personality: "Fun, creative, bold, friendly",
-      colors: "Bright pink, orange, butter yellow, cream, fresh green",
+      colors: "Warm orange, butter yellow, cream, fresh green, soft pink",
       typography: "Rounded display font paired with a simple sans-serif",
-      nextStep:
-        "Choose a few playful brand elements, such as icons, shapes, or patterns, to make your brand feel unique."
+      nextStep: "Choose playful brand elements, such as icons, patterns, or custom illustrations."
     };
   }
 
-  if (brandFeeling === "minimal" || visualStyle === "fresh") {
+  if (answers.brandFeeling === "minimal" || answers.visualStyle === "fresh") {
     return {
       title: "Modern Minimal",
-      description:
-        "Your brand direction should feel clean, clear, and easy to understand. This style works well for businesses that want a polished and professional online presence.",
-      personality: "Clear, calm, organized, trustworthy",
+      description: "Your brand should feel clean, clear, and easy to understand.",
+      personality: "Calm, organized, trustworthy, modern",
       colors: "White, soft gray, beige, muted blue, sage green",
-      typography: "Simple sans-serif paired with subtle accent typography",
-      nextStep:
-        "Focus on spacing, clean layouts, and consistent visuals across your website and social media."
+      typography: "Simple sans-serif with subtle serif accents",
+      nextStep: "Focus on clean layouts, strong spacing, and consistent visual hierarchy."
     };
   }
 
   return {
     title: "Warm Minimalist",
-    description:
-      "Your brand direction should feel welcoming, thoughtful, and approachable. This style works well for small businesses that want to create an emotional connection with their audience.",
+    description: "Your brand should feel welcoming, thoughtful, and approachable.",
     personality: "Warm, intentional, soft, approachable",
     colors: "Ivory, beige, soft brown, muted gold, warm blush",
     typography: "Elegant serif paired with a clean sans-serif",
-    nextStep:
-      "Build a moodboard with warm textures, simple layouts, and imagery that reflects comfort and connection."
+    nextStep: "Build a moodboard with warm textures, simple layouts, and imagery that reflects comfort and connection."
   };
 }

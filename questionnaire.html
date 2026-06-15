@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Clarity Questionnaire</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <a href="index.html">← Back Home</a>
+
+    <section class="hero">
+      <p class="eyebrow">Step 1 of 2</p>
+      <h1>Brand Discovery Questionnaire</h1>
+    </section>
+
+    <form id="brandForm" class="card">
+      <label>
+        What type of business are you creating?
+        <select id="businessType" required>
+          <option value="">Choose one</option>
+          <option value="cafe">Café / Bakery</option>
+          <option value="beauty">Beauty / Lifestyle</option>
+          <option value="events">Events / Creative Services</option>
+          <option value="shop">Online Shop</option>
+        </select>
+      </label>
+
+      <label>
+        How do you want your brand to feel?
+        <select id="brandFeeling" required>
+          <option value="">Choose one</option>
+          <option value="warm">Warm and welcoming</option>
+          <option value="luxury">Elegant and elevated</option>
+          <option value="playful">Fun and expressive</option>
+          <option value="minimal">Clean and modern</option>
+        </select>
+      </label>
+
+      <label>
+        What style are you most drawn to?
+        <select id="visualStyle" required>
+          <option value="">Choose one</option>
+          <option value="soft">Soft neutrals</option>
+          <option value="bold">Bold colors</option>
+          <option value="dark">Moody tones</option>
+          <option value="fresh">Fresh and bright</option>
+        </select>
+      </label>
+
+      <button type="submit">Generate My Results</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
