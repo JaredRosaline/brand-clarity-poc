@@ -11,6 +11,27 @@ body {
   line-height: 1.6;
 }
 
+/* ---------- Navigation ---------- */
+
+nav {
+  width: min(950px, 92%);
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f2933;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: #8a6f45;
+}
+
+/* ---------- Main Layout ---------- */
+
 .app {
   width: min(950px, 92%);
   margin: 0 auto;
@@ -43,6 +64,8 @@ h1 {
   font-size: 1.1rem;
 }
 
+/* ---------- Cards ---------- */
+
 .card,
 .result {
   background: #fffaf2;
@@ -51,6 +74,8 @@ h1 {
   padding: 30px;
   box-shadow: 0 20px 50px rgba(31, 41, 51, 0.08);
 }
+
+/* ---------- Forms ---------- */
 
 form {
   display: grid;
@@ -71,6 +96,8 @@ select {
   background: white;
 }
 
+/* ---------- Buttons ---------- */
+
 button {
   padding: 15px 20px;
   border: none;
@@ -88,13 +115,67 @@ button:hover {
   transform: translateY(-2px);
 }
 
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 24px;
+  background: #1f2933;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #8a6f45;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background: #999;
+  transform: none;
+}
+
+/* ---------- General Links ---------- */
+
+a {
+  color: #1f2933;
+}
+
+a:hover {
+  color: #8a6f45;
+}
+
+/* ---------- Lists ---------- */
+
+ul {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ---------- Results ---------- */
+
 .result {
   margin-top: 30px;
 }
 
 .result h2 {
-  font-size: 2rem;
-  margin-bottom: 12px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #8a6f45;
+}
+
+.result p {
+  margin-top: 6px;
 }
 
 .result-grid {
@@ -116,11 +197,16 @@ button:hover {
   color: #8a6f45;
 }
 
+/* ---------- Utility ---------- */
+
 .hidden {
   display: none;
 }
 
+/* ---------- Responsive ---------- */
+
 @media (max-width: 700px) {
+
   .result-grid {
     grid-template-columns: 1fr;
   }
@@ -128,5 +214,14 @@ button:hover {
   .card,
   .result {
     padding: 22px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  h1 {
+    line-height: 1.1;
   }
 }
