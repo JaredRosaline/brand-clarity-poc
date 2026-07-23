@@ -1,66 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Brand Results</title>
+
+  <meta
+    name="description"
+    content="View your personalized Brand Clarity recommendations, including brand personality, colors, typography, audience insights, and next steps."
+  />
+
+  <title>Brand Clarity | Your Brand Results</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="questionnaire.html">Questionnaire</a> |
-    <a href="results.html">Results</a>
+  <nav aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="questionnaire.html">Questionnaire</a>
+    <a href="results.html" aria-current="page">Results</a>
   </nav>
 
   <main class="app">
 
-    <section class="result card">
-      <p class="eyebrow">Step 2 of 2</p>
-      <h1 id="resultTitle">Your Brand Direction</h1>
-      <p id="resultDescription"></p>
+    <!-- Results Introduction -->
 
-      <h2>Brand Personality</h2>
-      <p id="personality"></p>
+    <section class="hero">
 
-      <h2>Color Direction</h2>
-      <p id="colors"></p>
+      <div>
 
-      <h2>Typography Direction</h2>
-      <p id="typography"></p>
+        <p class="eyebrow">
+          Step 2 of 2
+        </p>
 
-      <h2>Brand Keywords</h2>
-      <p id="keywords"></p>
+        <h1 id="resultTitle">
+          Your Brand Direction
+        </h1>
 
-      <h2>Target Audience Insight</h2>
-      <p id="audienceInsight"></p>
+        <p id="resultDescription">
+          Your personalized recommendations will appear below.
+        </p>
 
-      <h2>Business Goal Recommendation</h2>
-      <p id="goalRecommendation"></p>
+      </div>
 
-      <h2>Best Next Step</h2>
-      <p id="nextStep"></p>
+    </section>
 
-      <h2>Moodboard Inspiration</h2>
-      <ul>
-        <li>Editorial typography</li>
-        <li>Warm natural light photography</li>
-        <li>Minimal workspace imagery</li>
-        <li>Soft textures and intentional brand details</li>
-      </ul>
+    <!-- Personalized Results -->
 
-      <button disabled>Download Brand Summary Coming Soon</button>
+    <section
+      class="page-section result"
+      aria-labelledby="results-overview-heading"
+    >
 
-      <br><br>
+      <div class="section-heading">
 
-      <a class="button" href="questionnaire.html">Start Over</a>
+        <p class="eyebrow">
+          Personalized Recommendations
+        </p>
+
+        <h2 id="results-overview-heading">
+          Your Brand Clarity Overview
+        </h2>
+
+        <p>
+          Use these recommendations as a strategic starting point for creating
+          a more intentional, consistent, and recognizable brand.
+        </p>
+
+      </div>
+
+      <div class="result-grid">
+
+        <article>
+
+          <p class="eyebrow">
+            Identity
+          </p>
+
+          <h3>
+            Brand Personality
+          </h3>
+
+          <p id="personality">
+            Your brand personality will appear here.
+          </p>
+
+        </article>
+
+        <article>
+
+          <p class="eyebrow">
+            Visual Direction
+          </p>
+
+          <h3>
+            Color Direction
+          </h3>
+
+          <p id="colors">
+            Your recommended color direction will appear here.
+          </p>
+
+        </article>
+
+        <article>
+
+          <p class="eyebrow">
+            Type System
+          </p>
+
+          <h3>
+            Typography Direction
+          </h3>
+
+          <p id="typography">
+            Your typography recommendation will appear here.
+          </p>
+
+        </article>
+
+        <article>
+
+          <p class="eyebrow">
+            Brand Language
+          </p>
+
+          <h3>
+            Brand Keywords
+          </h3>
+
+          <p id="keywords">
+            Your brand keywords will appear here.
+          </p>
+
+        </article>
+
+      </div>
+
+      <!-- Strategic Insights -->
+
+      <div class="page-section">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Strategic Direction
+          </p>
+
+          <h2>
+            Audience and Business Insights
+          </h2>
+
+          <p>
+            These insights connect your visual direction to the people you
+            want to reach and the goals you want your brand to support.
+          </p>
+
+        </div>
+
+        <div class="result-grid">
+
+          <article>
+
+            <p class="eyebrow">
+              Audience
+            </p>
+
+            <h3>
+              Target Audience Insight
+            </h3>
+
+            <p id="audienceInsight">
+              Your audience insight will appear here.
+            </p>
+
+          </article>
+
+          <article>
+
+            <p class="eyebrow">
+              Business Strategy
+            </p>
+
+            <h3>
+              Business Goal Recommendation
+            </h3>
+
+            <p id="goalRecommendation">
+              Your business goal recommendation will appear here.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- Next Step -->
+
+      <div class="page-section">
+
+        <div class="card">
+
+          <p class="eyebrow">
+            Action Plan
+          </p>
+
+          <h2>
+            Best Next Step
+          </h2>
+
+          <p id="nextStep">
+            Your recommended next step will appear here.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Moodboard Inspiration -->
+
+      <div class="page-section">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Visual Inspiration
+          </p>
+
+          <h2>
+            Moodboard Direction
+          </h2>
+
+          <p>
+            Use these visual themes as inspiration when gathering imagery,
+            choosing typography, and creating future brand materials.
+          </p>
+
+        </div>
+
+        <div class="moodboard-grid" aria-label="Moodboard inspiration">
+
+          <article class="moodboard-item">
+            <div class="moodboard-label">
+              Editorial Typography
+            </div>
+          </article>
+
+          <article class="moodboard-item">
+            <div class="moodboard-label">
+              Natural Light
+            </div>
+          </article>
+
+          <article class="moodboard-item">
+            <div class="moodboard-label">
+              Intentional Details
+            </div>
+          </article>
+
+          <article class="moodboard-item">
+            <div class="moodboard-label">
+              Refined Workspaces
+            </div>
+          </article>
+
+          <article class="moodboard-item">
+            <div class="moodboard-label">
+              Soft Texture
+            </div>
+          </article>
+
+          <article class="moodboard-item">
+            <div class="moodboard-label">
+              Brand Storytelling
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- Results Actions -->
+
+      <div class="page-section">
+
+        <div class="card text-center">
+
+          <p class="eyebrow">
+            Continue Your Brand Journey
+          </p>
+
+          <h2>
+            Turn Your Direction Into Action
+          </h2>
+
+          <p>
+            Review your recommendations, begin gathering visual inspiration,
+            or restart the questionnaire to explore another possible direction.
+          </p>
+
+          <div class="hero-actions">
+
+            <button type="button" disabled>
+              Download Brand Summary Coming Soon
+            </button>
+
+            <a class="button button-secondary" href="questionnaire.html">
+              Start Over
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
   </main>
 
+  <footer>
+
+    <p>
+      Brand Clarity helps entrepreneurs transform ideas into intentional brands.
+    </p>
+
+  </footer>
+
   <script src="script.js"></script>
 
 </body>
+
 </html>

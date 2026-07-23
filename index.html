@@ -3,51 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brand Clarity</title>
+
+  <meta
+    name="description"
+    content="Brand Clarity helps entrepreneurs discover their brand personality, visual direction, and next branding steps."
+  />
+
+  <title>Brand Clarity | Find Your Brand Direction</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="questionnaire.html">Questionnaire</a> |
+  <nav aria-label="Primary navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="questionnaire.html">Questionnaire</a>
     <a href="results.html">Results</a>
   </nav>
 
   <main class="app">
+    <!-- Hero Section -->
     <section class="hero">
-      <p class="eyebrow">Brand Clarity</p>
-      <h1>Find Your Brand Direction</h1>
-      <p>
-        Answer a few quick questions and receive a personalized brand direction
-        for your small business.
-      </p>
-      <a class="button" href="questionnaire.html">Start Brand Discovery</a>
+      <div>
+        <p class="eyebrow">Brand Clarity</p>
+
+        <h1>Find Your Brand Direction</h1>
+
+        <p>
+          Answer a few thoughtful questions and receive personalized branding
+          guidance tailored to your business, audience, goals, and visual style.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="questionnaire.html">
+            Start Brand Discovery
+          </a>
+
+          <a class="button button-secondary" href="#how-it-works">
+            Learn How It Works
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>How It Works</h2>
+    <!-- Features Section -->
+    <section class="page-section" aria-labelledby="features-heading">
+      <div class="section-heading text-center max-width-small">
+        <p class="eyebrow">Personalized Guidance</p>
+        <h2 id="features-heading">Build a Brand With Greater Clarity</h2>
+        <p>
+          Brand Clarity transforms your ideas and preferences into an organized
+          direction you can use when developing your visual identity.
+        </p>
+      </div>
 
-      <h3>1. Answer Questions</h3>
-      <p>Tell us about your business type, audience, style, and goals.</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <p class="eyebrow">01</p>
+          <h3>Discover Your Brand Personality</h3>
+          <p>
+            Identify the qualities, emotions, and characteristics that should
+            shape how your business communicates with its audience.
+          </p>
+        </article>
 
-      <h3>2. Get Brand Insights</h3>
-      <p>Receive a personalized direction based on your responses.</p>
+        <article class="feature-card">
+          <p class="eyebrow">02</p>
+          <h3>Define Your Visual Identity</h3>
+          <p>
+            Receive recommendations for color direction, typography, imagery,
+            and the overall visual style of your brand.
+          </p>
+        </article>
 
-      <h3>3. Take Action</h3>
-      <p>Use your results to guide your visual identity, content, and next branding steps.</p>
+        <article class="feature-card">
+          <p class="eyebrow">03</p>
+          <h3>Build Brand Confidence</h3>
+          <p>
+            Use your personalized results to make more intentional and
+            consistent decisions across your website, content, and marketing.
+          </p>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>What You Will Receive</h2>
-      <ul>
-        <li>Brand personality keywords</li>
-        <li>Suggested color direction</li>
-        <li>Typography recommendations</li>
-        <li>Visual style guidance</li>
-        <li>Suggested next steps for building your brand</li>
-      </ul>
+    <!-- How It Works Section -->
+    <section
+      id="how-it-works"
+      class="page-section"
+      aria-labelledby="how-it-works-heading"
+    >
+      <div class="section-heading">
+        <p class="eyebrow">Simple Process</p>
+        <h2 id="how-it-works-heading">How It Works</h2>
+        <p>
+          Move through a simple three-step process designed to turn your ideas
+          into a focused branding direction.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <p class="eyebrow">Step One</p>
+          <h3>Answer Questions</h3>
+          <p>
+            Tell us about your business type, target audience, goals, preferred
+            personality, visual style, and color direction.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <p class="eyebrow">Step Two</p>
+          <h3>Receive Brand Insights</h3>
+          <p>
+            Your responses are analyzed to generate a personalized brand
+            direction based on your unique preferences.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <p class="eyebrow">Step Three</p>
+          <h3>Take Action</h3>
+          <p>
+            Apply your recommendations to your visual identity, website,
+            social media, content, and future branding decisions.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Deliverables Section -->
+    <section class="page-section" aria-labelledby="deliverables-heading">
+      <div class="card">
+        <div class="section-heading">
+          <p class="eyebrow">Your Personalized Results</p>
+          <h2 id="deliverables-heading">What You Will Receive</h2>
+          <p>
+            Your Brand Clarity results provide a practical starting point for
+            building a more intentional and consistent identity.
+          </p>
+        </div>
+
+        <ul>
+          <li>Personalized brand personality and keywords</li>
+          <li>Suggested color direction</li>
+          <li>Typography recommendations</li>
+          <li>Visual style guidance</li>
+          <li>Target audience insight</li>
+          <li>Business goal recommendations</li>
+          <li>Suggested next steps for building your brand</li>
+        </ul>
+
+        <a class="button" href="questionnaire.html">
+          Begin Your Questionnaire
+        </a>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <p>
+      Brand Clarity helps entrepreneurs move from uncertainty to intentional
+      brand direction.
+    </p>
+  </footer>
 </body>
 </html>

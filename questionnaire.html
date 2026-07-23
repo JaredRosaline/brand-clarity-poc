@@ -1,117 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brand Clarity Questionnaire</title>
+
+  <meta
+    name="description"
+    content="Complete the Brand Clarity questionnaire to receive personalized recommendations for your brand personality, colors, typography, audience, and next steps."
+  />
+
+  <title>Brand Clarity | Brand Discovery Questionnaire</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="questionnaire.html">Questionnaire</a> |
+  <nav aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="questionnaire.html" aria-current="page">Questionnaire</a>
     <a href="results.html">Results</a>
   </nav>
 
   <main class="app">
 
+    <!-- Questionnaire Introduction -->
+
     <section class="hero">
-      <p class="eyebrow">Step 1 of 2</p>
-      <h1>Brand Discovery Questionnaire</h1>
-      <p>
-        Answer the following questions to receive personalized branding recommendations.
-      </p>
+
+      <div>
+
+        <p class="eyebrow">
+          Brand Discovery
+        </p>
+
+        <h1>
+          Brand Discovery Questionnaire
+        </h1>
+
+        <p>
+          Answer a few thoughtful questions so Brand Clarity can generate
+          personalized recommendations based on your business, audience,
+          goals, and visual preferences.
+        </p>
+
+      </div>
+
     </section>
 
-    <form id="brandForm" class="card">
+    <!-- Questionnaire Form -->
 
-      <label>
-        What type of business are you creating?
-        <select id="businessType" required>
-          <option value="">Choose one</option>
-          <option value="cafe">Café / Bakery</option>
-          <option value="beauty">Beauty / Lifestyle</option>
-          <option value="events">Events / Creative Services</option>
-          <option value="shop">Online Shop</option>
-        </select>
-      </label>
+    <section
+      class="page-section"
+      aria-labelledby="questionnaire-heading"
+    >
 
-      <br><br>
+      <div class="card">
 
-      <label>
-        How do you want your brand to feel?
-        <select id="brandFeeling" required>
-          <option value="">Choose one</option>
-          <option value="warm">Warm and welcoming</option>
-          <option value="luxury">Elegant and elevated</option>
-          <option value="playful">Fun and expressive</option>
-          <option value="minimal">Clean and modern</option>
-        </select>
-      </label>
+        <div class="form-intro">
 
-      <br><br>
+          <p class="eyebrow">
+            Step 1 of 2
+          </p>
 
-      <label>
-        What style are you most drawn to?
-        <select id="visualStyle" required>
-          <option value="">Choose one</option>
-          <option value="soft">Soft neutrals</option>
-          <option value="bold">Bold colors</option>
-          <option value="dark">Moody tones</option>
-          <option value="fresh">Fresh and bright</option>
-        </select>
-      </label>
+          <h2 id="questionnaire-heading">
+            Tell Us About Your Brand
+          </h2>
 
-      <br><br>
+          <p>
+            Complete all six questions. Your answers will help generate a
+            suggested brand personality, color direction, typography system,
+            audience insight, and strategic next step.
+          </p>
 
-      <label>
-        Who is your primary target audience?
-        <select id="targetAudience">
-          <option value="">Choose one</option>
-          <option value="young">Young Adults</option>
-          <option value="families">Families</option>
-          <option value="professionals">Professionals</option>
-          <option value="luxury">High-End Clients</option>
-        </select>
-      </label>
+        </div>
 
-      <br><br>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Questionnaire progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="50"
+        >
+          <div class="progress-bar"></div>
+        </div>
 
-      <label>
-        What is your biggest branding goal?
-        <select id="brandGoal">
-          <option value="">Choose one</option>
-          <option value="recognition">Increase Brand Recognition</option>
-          <option value="sales">Increase Sales</option>
-          <option value="social">Grow Social Media Presence</option>
-          <option value="website">Increase Website Traffic</option>
-        </select>
-      </label>
+        <form id="brandForm">
 
-      <br><br>
+          <!-- Business Type -->
 
-      <label>
-        Which color palette best matches your vision?
-        <select id="colorPreference">
-          <option value="">Choose one</option>
-          <option value="neutral">Neutral & Minimal</option>
-          <option value="earthy">Warm Earth Tones</option>
-          <option value="bold">Bold & Vibrant</option>
-          <option value="dark">Dark & Moody</option>
-        </select>
-      </label>
+          <div class="form-group">
 
-      <br><br>
+            <label for="businessType">
+              What type of business are you creating?
+            </label>
 
-      <button type="submit">Generate My Brand Results</button>
+            <select
+              id="businessType"
+              name="businessType"
+              required
+            >
+              <option value="" selected disabled>
+                Choose one
+              </option>
 
-    </form>
+              <option value="cafe">
+                Café / Bakery
+              </option>
+
+              <option value="beauty">
+                Beauty / Lifestyle
+              </option>
+
+              <option value="events">
+                Events / Creative Services
+              </option>
+
+              <option value="shop">
+                Online Shop
+              </option>
+            </select>
+
+          </div>
+
+          <!-- Brand Feeling -->
+
+          <div class="form-group">
+
+            <label for="brandFeeling">
+              How do you want your brand to feel?
+            </label>
+
+            <select
+              id="brandFeeling"
+              name="brandFeeling"
+              required
+            >
+              <option value="" selected disabled>
+                Choose one
+              </option>
+
+              <option value="warm">
+                Warm and Welcoming
+              </option>
+
+              <option value="luxury">
+                Elegant and Elevated
+              </option>
+
+              <option value="playful">
+                Fun and Expressive
+              </option>
+
+              <option value="minimal">
+                Clean and Modern
+              </option>
+            </select>
+
+          </div>
+
+          <!-- Visual Style -->
+
+          <div class="form-group">
+
+            <label for="visualStyle">
+              What visual style are you most drawn to?
+            </label>
+
+            <select
+              id="visualStyle"
+              name="visualStyle"
+              required
+            >
+              <option value="" selected disabled>
+                Choose one
+              </option>
+
+              <option value="soft">
+                Soft Neutrals
+              </option>
+
+              <option value="bold">
+                Bold Colors
+              </option>
+
+              <option value="dark">
+                Moody Tones
+              </option>
+
+              <option value="fresh">
+                Fresh and Bright
+              </option>
+            </select>
+
+          </div>
+
+          <!-- Target Audience -->
+
+          <div class="form-group">
+
+            <label for="targetAudience">
+              Who is your primary target audience?
+            </label>
+
+            <select
+              id="targetAudience"
+              name="targetAudience"
+              required
+            >
+              <option value="" selected disabled>
+                Choose one
+              </option>
+
+              <option value="young">
+                Young Adults
+              </option>
+
+              <option value="families">
+                Families
+              </option>
+
+              <option value="professionals">
+                Professionals
+              </option>
+
+              <option value="luxury">
+                High-End Clients
+              </option>
+            </select>
+
+          </div>
+
+          <!-- Brand Goal -->
+
+          <div class="form-group">
+
+            <label for="brandGoal">
+              What is your biggest branding goal?
+            </label>
+
+            <select
+              id="brandGoal"
+              name="brandGoal"
+              required
+            >
+              <option value="" selected disabled>
+                Choose one
+              </option>
+
+              <option value="recognition">
+                Increase Brand Recognition
+              </option>
+
+              <option value="sales">
+                Increase Sales
+              </option>
+
+              <option value="social">
+                Grow Social Media Presence
+              </option>
+
+              <option value="website">
+                Increase Website Traffic
+              </option>
+            </select>
+
+          </div>
+
+          <!-- Color Preference -->
+
+          <div class="form-group">
+
+            <label for="colorPreference">
+              Which color palette best matches your vision?
+            </label>
+
+            <select
+              id="colorPreference"
+              name="colorPreference"
+              required
+            >
+              <option value="" selected disabled>
+                Choose one
+              </option>
+
+              <option value="neutral">
+                Neutral &amp; Minimal
+              </option>
+
+              <option value="earthy">
+                Warm Earth Tones
+              </option>
+
+              <option value="bold">
+                Bold &amp; Vibrant
+              </option>
+
+              <option value="dark">
+                Dark &amp; Moody
+              </option>
+            </select>
+
+          </div>
+
+          <!-- Form Action -->
+
+          <div class="form-actions">
+
+            <button type="submit">
+              Generate My Brand Results
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
 
   </main>
+
+  <footer>
+    <p>
+      Brand Clarity helps entrepreneurs transform ideas into intentional brands.
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
